@@ -1,12 +1,18 @@
+<hmtl>
+  <head>
+   <meta charset="UTF-8">
+ </head>
+</html>
 <?php
 session_start();
 error_reporting(~E_NOTICE);
 $data = "1";
 $data = "1";
 $host = 'localhost';
-$username='client';
-$password='oakfap222';
-$db= 'test';
+$username='permpany_otiot';
+$password='otiot';
+	$db= 'permpany_otiot';
+
 $conn = mysqli_connect($host, $username, $password, $db);
 if($conn === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
@@ -27,8 +33,11 @@ echo $sql;
 
     echo "\r\n\t\t".'alert("เกิดข้อผิดพลาด!");';
     printf("error: %s\n", mysqli_error($conn));
+    mysqli_close($conn);
+
     exit();
   }
+  mysqli_close($conn);
 
 
 

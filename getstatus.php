@@ -1,9 +1,14 @@
+<hmtl>
+  <head>
+   <meta charset="UTF-8">
+ </head>
+</html>
 <?php
 session_start();
 $host = 'localhost';
-$username='client';
-$password='oakfap222';
-$db= 'test';
+$username='permpany_otiot';
+$password='otiot';
+$db= 'permpany_otiot';
 
 $device_id=$_POST['deviceid'];
 
@@ -19,8 +24,10 @@ if($data){
 
 		echo "\r\n\t\t".'alert("เกิดข้อผิดพลาด! ");';
 		printf("error: %s\n", mysqli_error($conn));
+    mysqli_close($conn);
+
 		exit();
 	}
-
+mysqli_close($conn);
 
 ?>
